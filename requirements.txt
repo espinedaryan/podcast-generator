@@ -1,0 +1,7 @@
+streamlit
+pydub
+elevenlabs
+requests
+python-decouple
+SQLAlchemy
+uuid
