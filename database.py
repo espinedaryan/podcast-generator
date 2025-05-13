@@ -31,6 +31,18 @@ def init_db():
         )
     ''')
     
+    # Create progress table
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS progress (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            script TEXT NOT NULL,
+            config TEXT NOT NULL,
+            audio_segments TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+    
     conn.commit()
     conn.close()
 
